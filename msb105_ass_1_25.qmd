@@ -21,9 +21,7 @@ abstract: "A very short abstract. Put the abstract text here. One or two paragra
 
 ## Introduction
 
-What is this paper about?
-What is discussed?
-Why is it of any consequence?
+What is this paper about? What is discussed? Why is it of any consequence?
 
 ## Literature review
 
@@ -35,8 +33,7 @@ Use both in-line and normal citations.
 
 Example:
 
-@gentleman2005 argues that bla bla bla.
-On the other hand it's claimed that bla bla [@barbalorenaa.2018; @bartlett2008].
+@gentleman2005 argues that bla bla bla. On the other hand it's claimed that bla bla [@barbalorenaa.2018; @bartlett2008].
 
 ## Discussion of the reseach question
 
