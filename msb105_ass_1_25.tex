@@ -1,0 +1,393 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  british,
+  a4paper,
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage[english]{selnolig} % disable illegal ligatures
+\fi
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Is reproducibility good enough?},
+  pdfauthor={Harald Bjarne Vika},
+  pdflang={en-GB},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Is reproducibility good enough?}
+\author{Harald Bjarne Vika}
+\date{18,09,2025}
+\begin{document}
+\maketitle
+\begin{abstract}
+A very short abstract. Put the abstract text here. One or two paragraphs
+summarising what follows below.
+\end{abstract}
+
+
+\section{Introduction}\label{introduction}
+
+What is this paper about? What is discussed? Why is it of any
+consequence?
+
+The advancement of science is build on a trust in discovery of new data,
+and through the use of reproducibility, scientist can gain confidence in
+their research concluded data. But in recent time, the community have
+been getting reports on more peer-reviewed preclinical studies that are
+none reproducible(McNutt, 2014).
+
+In this paper we will look more in to reproducibility of scientific
+data, why its important for using to gaining trust and if its good
+enough to be consider useful for the future scientist to use. The paper
+will first present literature around the meaning of word reproducibility
+and replicate, and its use in the science world. We will then discuss if
+reproducibility is necessary or if the scientific data can be
+replicated. How the use of R and a quarto document can help with
+reproducibility of research, any problems that can which may occur and
+if we can solve them. In the need we will try to conclude these
+questions and what our thoughts on the subject of reproducibility of
+scientific data.
+
+\section{Literature review}\label{literature-review}
+
+\section{Theory on reproducibility}\label{theory-on-reproducibility}
+
+Smart stuff from others about the topic.
+
+The cover story of The Economist ``How Science goes wrong'' uses the
+terms for reproducibility from (Barba, n.d.) which is
+``\emph{Reproducibility refers to the instance in which the original
+researcher's data and computer codes are used to regenerate the results,
+and arriving at the same results using their own data and methods}''.
+While from the same review paper the term of replicability can viewed as
+an ``\emph{instances in which a resarcher collects new data to arrive at
+the same scientific findings as a previous study,''} or \emph{''a
+different team arriving at the same results using the original authors
+artifacts''.} With this we have a understanding that the terms of
+reproducibility and replicability can overlap one another but can be
+used differently. Another term is generalizability, where the results of
+a study can be applied on any other context or population which is
+different from the original case study. These three terms would refers
+to the science that is''robust and reliable'' which is the foundation of
+all scientific development for the ability to build on prior work. Here
+we will try to focus on the use of reproducibility of scientific data.
+
+The reproducibility is a necessary, but not sufficient condition for
+replicability. Peng (2011) Discusses that reproducibility for a
+publication should be a minimal requirement. As said earlier that
+reproducibility is a way for the scientist to gain confident and trust
+in their research but what is a research reproducibility? Goodman et al.
+(2016) gives us three explanations of what research reproducibiliy
+means:
+
+\begin{itemize}
+\item
+  Methods reproducibility, which is how the provision of enough detail
+  about study procedures and data can be used to repeat the same
+  research in theory and in actuality.
+\item
+  Results reproducibility, also described as replicabilty, is refered to
+  obtain the same results from previously research when conducting
+  independent studys but the process is the same as the original
+  research.
+\item
+  Robustness and generalizability are two terms that can be used instead
+  of the term reproducibility, where robustness means the stability of a
+  experimental conclusion when it is either a baseline assumptions or
+  experimental procedures. Generalizability can be refereed to the
+  persistence of an effect in settings different from and outside of
+  experimental framework.
+\end{itemize}
+
+\section{Publication bias}\label{publication-bias}
+
+When it comes to publication on reproducibility one can encounter
+publication bias which may affect the ability to publish the findings.
+The worst case if a scientific journals contains a big collection of the
+type 1 error. So what is type 1 error? Its the definition of a
+incorrectly concluding of the research. (kilde) Its the size of the
+error which the researcher is willing to accept prior to the hypothesis
+test. Type 1 error is when H0 is rejected even if its true. It can be
+about concluding that there is an effect even when its not. This way we
+may end up with similar studies with no effect but there can be a risk
+that we would find the wrong conclusion in the literature. This will
+hurt later research that tries to replicate the experiment. An exempel
+on this is the ``File Drawer Problem'' from Rosenthal (1979), where
+studies with an H0 that can not be rejectet is sent to the file drawer
+and the ones where H0 is rejected is published. This will go on to
+create false positive. If prestigious journals manage to publish an
+research with a false positive it will make it so that others will have
+little motivation to try to reproduce it. Another error that can occur
+is that its costly to invest in a research program which in the end will
+create more false positive and may lead to ineffective policy changes. A
+field that is known to publish research with false positive would surly
+risk losing its credibility and trust from other scientist (Simmons et
+al., 2011).
+
+Use a least 20 citations, a least 5 of them must be new (not from the
+provided .bib file).
+
+Use both in-line and normal citations.
+
+Example:
+
+(\textbf{gentleman2005?}) argues that bla bla bla. On the other hand
+it's claimed that bla bla (\textbf{barbalorenaa.2018?};
+\textbf{bartlett2008?}).
+
+\section{Discussion of the reseach
+question}\label{discussion-of-the-reseach-question}
+
+\begin{itemize}
+\tightlist
+\item
+  Should replicability be the norm or is this to much to ask for now?
+\item
+  Can Quarto documents help with reproducibility?
+\item
+  What problems remains and how can these be solved?
+\end{itemize}
+
+\section{Conclusion}\label{conclusion}
+
+\section{References}\label{references}
+
+and
+
+\begin{itemize}
+\tightlist
+\item
+  Version number and reference to packages used
+\item
+  R version used
+\end{itemize}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-barbaTerminologiesReproducibleResearch2018}
+Barba, L. A. (n.d.). \emph{Terminologies for reproducible research}.
+\url{https://doi.org/10.48550/arXiv.1802.03311}
+
+\bibitem[\citeproctext]{ref-goodman2016b}
+Goodman, S. N., Fanelli, D., \& Ioannidis, J. P. A. (2016). What does
+research reproducibility mean? \emph{Science Translational Medicine},
+\emph{8}(341), 341ps12--341ps12.
+
+\bibitem[\citeproctext]{ref-mcnutt2014}
+McNutt, M. (2014). Reproducibility. \emph{Science}, \emph{343}(6168),
+229--229.
+
+\bibitem[\citeproctext]{ref-peng2011}
+Peng, R. D. (2011).
+\href{https://www.ncbi.nlm.nih.gov/pubmed/22144613}{Reproducible
+{Research} in {Computational Science}}. \emph{Science},
+\emph{334}(6060), 1226--1227.
+
+\bibitem[\citeproctext]{ref-rosenthal1979}
+Rosenthal, R. (1979). \emph{The file drawer problem and tolerance for
+null results.}
+
+\bibitem[\citeproctext]{ref-simmons2011}
+Simmons, J. P., Nelson, L. D., \& Simonsohn, U. (2011). False-positive
+psychology: {Undisclosed} flexibility in data collection and analysis
+allows presenting anything as significant. \emph{Psychological Science},
+\emph{22}(11), 1359--1366.
+
+\end{CSLReferences}
+
+
+
+
+\end{document}
