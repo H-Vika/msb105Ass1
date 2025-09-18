@@ -35,11 +35,11 @@ The cover story of The Economist "How Science goes wrong" uses the terms for rep
 
 The reproducibility is a necessary, but not sufficient condition for replicability. @peng2011 Discusses that reproducibility for a publication should be a minimal requirement. As said earlier that reproducibility is a way for the scientist to gain confident and trust in their research but what is a research reproducibility? @goodman2016b gives us three explanations of what research reproducibiliy means:
 
--   Methods reproducibility
+-   Methods reproducibility, which is how the provision of enough detail about study procedures and data can be used to repeat the same research in theory and in actuality.
 
--   Results reproducibility
+-   Results reproducibility, also described as replicabilty, is refered to obtain the same results from previously research when conducting independent studys but the process is the same as the original research.
 
--   Robustness and generalizability
+-   Robustness and generalizability are two terms that can be used instead of the term reproducibility, where robustness means the stability of a experimental conclusion when it is either a baseline assumptions or experimental procedures. Generalizability can be refereed to the persistence of an effect in settings different from and outside of experimental framework.
 
 Use a least 20 citations, a least 5 of them must be new (not from the provided .bib file).
 
