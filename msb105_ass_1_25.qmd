@@ -1,8 +1,8 @@
 ---
 title: "Is reproducibility good enough?"
-author: "Author Name"
+author: "Harald Bjarne Vika"
 date: last-modified
-date-format: "dddd D MMM, YYYY"
+date-format: "18,09,2025"
 csl: apa7.csl
 lang: en-GB
 format:
@@ -23,9 +23,15 @@ abstract: "A very short abstract. Put the abstract text here. One or two paragra
 
 What is this paper about? What is discussed? Why is it of any consequence?
 
+The advancement of science is build on a trust in discovery of new data, and through the use of responsibility, scientist can gain confidence in their research concluded data. But in recent time, the community have been getting reports on more peer-reviewed preclinical studies that are none reproducible[@mcnutt2014].
+
+In this paper we will look more in to reproducibility of scientific data, why its important for using to gaining trust and if its good enough to be consider useful for the future scientist to use. The paper will first present literature around the meaning of word reproducibility and replicate, and its use in the science world. We will then discuss if reproducibility is necessary or if the scientific data can be replicated. How the use of R and a quarto document can help with reproducibility of research, any problems that can which may occur and if we can solve them. In the need we will try to conclude these questions and what our thoughts on the subject of reproducibility of scientific data.
+
 ## Literature review
 
 Smart stuff from others about the topic.
+
+The cover story of The Economist "How Science goes wrong" uses the terms for reproducibility from [@barbaTerminologiesReproducibleResearch2018] which is "*Reproducibility refers to the instance in which the original researcher's data and computer codes are used to regenerate the results, and arriving at the same results using their own data and methods*". While from the same review paper the term of replicability can viewed as an "*instances in which a resarcher collects new data to arrive at the same scientific findings as a previous study,"* or *"a different team arriving at the same results using the original authors artifacts".* With this we have a understanding that the terms of reproducibility and replicability can overlap one another but can be used differently. Here we will try to focus on the use of reproducibility of scientific data.
 
 Use a least 20 citations, a least 5 of them must be new (not from the provided .bib file).
 

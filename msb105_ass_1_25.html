@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Author Name">
+<meta name="author" content="Harald Bjarne Vika">
 
 <title>Is reproducibility good enough?</title>
 <style>
@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="msb105_ass_1_25_files/libs/clipboard/clipboard.min.js"></script>
@@ -58,14 +78,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Author Name </p>
+             <p>Harald Bjarne Vika </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Tuesday 16 Sep, 2025</p>
+      <p class="date">18,09,2025</p>
     </div>
   </div>
   
@@ -86,10 +106,13 @@ ul.task-list li input[type="checkbox"] {
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>What is this paper about? What is discussed? Why is it of any consequence?</p>
+<p>The advancement of science is build on a trust in discovery of new data, and through the use of responsibility, scientist can gain confidence in their research concluded data. But in recent time, the community have been getting reports on more peer-reviewed preclinical studies that are none reproducible<span class="citation" data-cites="mcnutt2014">(<a href="#ref-mcnutt2014" role="doc-biblioref">McNutt, 2014</a>)</span>.</p>
+<p>In this paper we will look more in to reproducibility of scientific data, why its important for using to gaining trust and if its good enough to be consider useful for the future scientist to use. The paper will first present literature around the meaning of word reproducibility and replicate, and its use in the science world. We will then discuss if reproducibility is necessary or if the scientific data can be replicated. How the use of R and a quarto document can help with reproducibility of research, any problems that can which may occur and if we can solve them. In the need we will try to conclude these questions and what our thoughts on the subject of reproducibility of scientific data.</p>
 </section>
 <section id="literature-review" class="level2">
 <h2 class="anchored" data-anchor-id="literature-review">Literature review</h2>
 <p>Smart stuff from others about the topic.</p>
+<p>The cover story of The Economist “How Science goes wrong” uses the terms for reproducibility from <span class="citation" data-cites="barbaTerminologiesReproducibleResearch2018">(<a href="#ref-barbaTerminologiesReproducibleResearch2018" role="doc-biblioref">Barba, n.d.</a>)</span> which is “<em>Reproducibility refers to the instance in which the original researcher’s data and computer codes are used to regenerate the results, and arriving at the same results using their own data and methods</em>”. While from the same review paper the term of replicability can viewed as an “<em>instances in which a resarcher collects new data to arrive at the same scientific findings as a previous study,“</em> or <em>“a different team arriving at the same results using the original authors artifacts”.</em> With this we have a understanding that the terms of reproducibility and replicability can overlap one another but can be used differently. Here we will try to focus on the use of reproducibility of scientific data.</p>
 <p>Use a least 20 citations, a least 5 of them must be new (not from the provided .bib file).</p>
 <p>Use both in-line and normal citations.</p>
 <p>Example:</p>
@@ -113,9 +136,17 @@ ul.task-list li input[type="checkbox"] {
 <li>Version number and reference to packages used</li>
 <li>R version used</li>
 </ul>
+
 </section>
 
-</main>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-barbaTerminologiesReproducibleResearch2018" class="csl-entry" role="listitem">
+Barba, L. A. (n.d.). <em>Terminologies for reproducible research</em>. <a href="https://doi.org/10.48550/arXiv.1802.03311">https://doi.org/10.48550/arXiv.1802.03311</a>
+</div>
+<div id="ref-mcnutt2014" class="csl-entry" role="listitem">
+McNutt, M. (2014). Reproducibility. <em>Science</em>, <em>343</em>(6168), 229–229.
+</div>
+</div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
