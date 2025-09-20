@@ -64,23 +64,29 @@ Together, these concepts form a broader understanding of what it means for scien
 
 ## Publication bias
 
-When it comes to publication on reproducibility one can encounter publication bias which may affect the ability to publish the findings.
-The worst case if a scientific journals contains a big collection of the type 1 error.
-So what is type 1 error?
-Its the definition of a incorrectly concluding of the research[@TypeTypeII].
-Its the size of the error which the researcher is willing to accept prior to the hypothesis test.
-Type 1 error is when H0 is rejected even if its true.
-It can be about concluding that there is an effect even when its not.
-This way we may end up with similar studies with no effect but there can be a risk that we would find the wrong conclusion in the literature.
-This will hurt later research that tries to replicate the experiment.
-An exempel on this is the "File Drawer Problem" from @rosenthal1979, where studies with an H0 that can not be rejected is sent to the file drawer and the ones where H0 is rejected is published.
-This will go on to create false positive.
-If prestigious journals manage to publish an research with a false positive it will make it so that others will have little motivation to try to reproduce it.
-Another error that can occur is that its costly to invest in a research program which in the end will create more false positive and may lead to ineffective policy changes.
-A field that is known to publish research with false positive would surly risk losing its credibility and trust from other scientist [@simmons2011].
-The @young2008 tells that its "*more alarming is the general paucity in the literature of negative data. In some fields, almost all published studies sow formally significant results so that statistical significance no longer appears discriminating*".
-The publication bias will also have effect on meta-analysis, which is an combined result of multiple scientific studies[@russoHowReviewMetaanalysis2007].
-So when one result is influenced by publication bias, the others may feel its effect.
+When discussing reproducibility in scientific research, one major challenge is *publication bias*, which can significantly affect the ability to publish findings.
+This bias can lead to a disproportionate representation of positive results in the literature, while studies reporting null or negative results are often left unpublished.
+
+One serious consequence of publication bias is the increased risk of Type I errors, false positives.
+A *Type I error* occurs when the null hypothesis (H₀) is incorrectly rejected, meaning we conclude that there is an effect when, in fact, none exists.
+The significance level (commonly denoted as α) represents the probability of making this kind of error and reflects the level of risk the researcher is willing to accept before conducting the hypothesis test [@TypeTypeII].
+
+If scientific journals systematically favor studies that reject the null hypothesis, the literature may become saturated with false positives.
+This situation undermines the foundation of future research, especially when later studies attempt (and fail) to replicate the original findings.
+One well-known example of this issue is the *"File Drawer Problem"* described by @rosenthal1979, where studies that fail to reject the null hypothesis are effectively "filed away" and never published, while only statistically significant results make it to print.
+This selective publication practice skews the overall body of evidence, making false positives more likely.
+
+The implications are far-reaching.
+If a prestigious journal publishes a study with a false positive, it may discourage replication efforts due to the perceived credibility of the source.
+Additionally, investing resources into research programs based on such flawed findings can be costly and may lead to ineffective or even harmful policy decisions.
+
+Fields that regularly publish false positives risk losing credibility and the trust of the scientific community [@simmons2011].
+As @young2008 notes, *"More alarming is the general paucity in the literature of negative data. In some fields, almost all published studies show formally significant results, so that statistical significance no longer appears discriminating."* This lack of negative results contributes further to the distortion of the scientific record.
+
+Publication bias also compromises meta-analyses, which aggregate data from multiple studies to draw broader conclusions [@russoHowReviewMetaanalysis2007].
+If the individual studies included are themselves biased toward positive findings, the meta-analytic results will also be skewed, compounding the problem.
+
+In short, addressing publication bias is essential to preserving the reliability, replicability, and credibility of scientific research.
 
 So when it comes it economic and how to be able to reproduce the research, one can look at an old journal the "Econometrica" where @frischEditorsNote1933 states that "*Statistical and other numerical work presented in Econometrica, the original raw data will, as a rule, be published, unless their volume is excessive*".
 This states that all the data ones used in its research should be presented if possible.
