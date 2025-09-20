@@ -88,39 +88,75 @@ If the individual studies included are themselves biased toward positive finding
 
 In short, addressing publication bias is essential to preserving the reliability, replicability, and credibility of scientific research.
 
-So when it comes it economic and how to be able to reproduce the research, one can look at an old journal the "Econometrica" where @frischEditorsNote1933 states that "*Statistical and other numerical work presented in Econometrica, the original raw data will, as a rule, be published, unless their volume is excessive*".
-This states that all the data ones used in its research should be presented if possible.
-But as time passes, bigger models was needed to present the data which ended up in researchers only publicing the results and the reproducing or replicating of the research ended up nearly impossible.
-Solutions had to be created for archiving the data, one was the American Economic Association data archive[@zotero-321].
-@mccullough2008a points that "*All the long-standing archives at economics journals do not facilitate the re-production of published results. The data-only archives at Journal of business and Economic Statistics and Economic Journal fail in part because most authors do not contribute data*".
-With other words, the solution didn't work as one hoped for.
-Another solution is the "computable documents" solution that uses codes integral in the article, so that the research can be submitted with the data necessary to fully be able to reproduce the research.
-Through the use of codes one could reproduce research that used more and larger data then before.
-One exempel on "computable documents" could be Wavelab which is a computer package that contains all the codes one require to reproduce figures from the researchers published wavelet articles.
-This package comes from @WaveLabReproducibleResearch, where they want people that's interested to inspect the source codes so that scientist could be more engage in "really reproducible" research.
-A quote from @gentleman2007b tells us how a software tool should be of assisten when it comes to reproducibility: "*The step from disseminating analyses via a compendium to reproducible research is a small one. By reproducible research, we mean research papers with accompanying software tools that allow the reader to directly reproduce the results and employ the methods that are presented in the research paper*." This way the artical can contain the text, a code to read in the data, code to calculate the models and how to test them, and in the end, the code for the results on the research.
-With that submitted in the journal, the research can then be fully reproducible.
+When it comes to economics and the issue of research reproducibility, historical efforts can be traced back to journals like *Econometrica*.
+In an editorial note, @frischEditorsNote1933 emphasized the importance of transparency, stating: *“Statistical and other numerical work presented in Econometrica, the original raw data will, as a rule, be published, unless their volume is excessive”*.
+This reflects an early recognition that making data publicly available is essential for reproducibility.
 
-So to implement these archiving of data, one would use programs such as Sweave how is the predecessor of Knitr, to blend codes and place the info in a Latex document[@SweaveDynamicGeneration].
-The one we uses today is the Knitr which is supported by the use of Rstudio.
-The Rstudio is a futher development from R notebook where we can run codes sequentially but at the same time each one can be run individually to experiment with the code-chunck[@landerEveryoneAdvancedAnalytics2017].
-The program Rstudio structures the data, transforms it, visualize it and give out a model for the user.
-Through the use of quarto documents in Rstudie, one can create a rapport that contains both the text and codes, use it to create documents in the format of HTML, PDF, word or slides.
+However, over time, as economic research grew in complexity and scale, models became larger and more computationally intensive.
+As a result, researchers began publishing only final results, while the raw data and underlying code were often omitted.
+This shift made it increasingly difficult—if not impossible—for others to replicate or reproduce published findings.
 
-Use a least 20 citations, a least 5 of them must be new (not from the provided .bib file).
+To address this problem, various solutions were proposed.
+One such initiative was the creation of data archives, such as the American Economic Association (AEA) data repository [@zotero-321], aimed at preserving and sharing datasets used in published research.
+However, these archives often fell short of their goal.
+As @mccullough2008a points out: *“All the long-standing archives at economics journals do not facilitate the reproduction of published results. The data-only archives at the Journal of Business and Economic Statistics and the Economic Journal fail in part because most authors do not contribute data.”* In other words, the mere existence of archives was insufficient—author compliance was inconsistent, and critical components such as code and documentation were often missing.
 
-Use both in-line and normal citations.
+A more robust solution emerged in the form of **computable documents**—research articles that integrate text, data, and executable code in a single, reproducible format.
+This approach allows other researchers to fully reproduce the original study, including data preparation, model estimation, and results generation.
 
-Example:
+One example of this is **WaveLab**, a software package designed to reproduce figures from published wavelet research.
+Developed with reproducibility in mind, WaveLab includes all the source code required to replicate results [@WaveLabReproducibleResearch; ].
+The authors encouraged readers to inspect and use the code, promoting what they called "really reproducible" research.
 
-@gentleman2005 argues that bla bla bla.
-On the other hand it's claimed that bla bla [@barbalorenaa.2018; @bartlett2008].
+Gentleman (2007) reinforces this idea by emphasizing the role of software in enabling reproducibility: *“The step from disseminating analyses via a compendium to reproducible research is a small one. By reproducible research, we mean research papers with accompanying software tools that allow the reader to directly reproduce the results and employ the methods that are presented in the research paper”* [@gentleman2007b].
+
+In this model, the article itself includes:
+
+-   The research text
+
+-   Code to import and clean the data,
+
+-   Code for model estimation and testing,
+
+-   And code to generate the final results.
+
+By submitting such materials alongside the manuscript, the research becomes fully transparent and reproducible.
+This not only strengthens the credibility of the work but also enables future researchers to build on it more effectively.
+
+To implement effective data archiving and reproducible research, tools such as **Sweave** were originally developed to integrate code and documentation.
+Sweave, the predecessor of **knitr**, allowed users to embed R code within LaTeX documents to dynamically generate reports [@SweaveDynamicGeneration].
+
+Today, **knitr** is the more widely used and advanced tool, fully supported within **RStudio**.
+RStudio itself is an evolution of earlier tools like the R Notebook and offers an integrated development environment (IDE) that allows users to run code in **sequential chunks**, while also enabling individual execution for experimentation and debugging [@landerEveryoneAdvancedAnalytics2017].
+
+RStudio supports the full data science workflow: it helps structure and clean data, perform transformations, visualize results, and build statistical or machine learning models.
+One powerful feature is the use of **Quarto** documents, which allow users to combine narrative text with code in a single file.
+These documents can be rendered into multiple output formats—including HTML, PDF, Word, and presentation slides—making it easy to share fully reproducible research reports.
+
+By using these tools, researchers can ensure that their analyses are transparent, replicable, and accessible to others.
 
 ## Discussion of the reseach question
 
 -   Should replicability be the norm or is this to much to ask for now?
 
-So how is reproducibility in todays standard?
+Replicability *should* be the norm in scientific research, and while it presents challenges, expecting it is not too much to ask—it is, in fact, essential for credible and trustworthy science.
+
+Historically, even early journals like *Econometrica* emphasized the importance of transparency.
+As @frischEditorsNote1933 noted, raw data should be published alongside statistical work unless prohibitively large [@frischEditorsNote1933].
+This shows that the value of replicability was acknowledged from the beginning.
+However, as research became more complex and models more data-intensive, researchers increasingly published only results, making it nearly impossible for others to replicate their work.
+
+Solutions like the American Economic Association’s data archive were a step forward, but they often failed in practice because many authors did not submit their data [@mccullough2008a].
+This highlights that infrastructure alone isn't enough stronger cultural and institutional expectations are needed.
+
+More promising are tools that support **computable documents**, such as **knitr** and **Quarto** in **RStudio**, which allow researchers to embed code, data, and analysis directly within documents.
+These tools make replicability not only possible but practical.
+They allow for seamless integration of text, code, and output, which can be rendered into shareable formats like HTML, PDF, or slides.
+With these modern tools, the barriers to replicable research are significantly lower than they once were.
+
+In short, while replicability may have seemed burdensome in the past, today’s tools have made it far more achievable.
+As the cost of irreproducible research grows—damaging trust, wasting resources, and leading to false conclusions—it becomes increasingly clear that replicability is not an unreasonable demand.
+Instead, it should be a standard practice that protects the integrity and progress of science.
 
 -   Can Quarto documents help with reproducibility?
 -   What problems remains and how can these be solved?

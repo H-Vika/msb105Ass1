@@ -222,23 +222,26 @@ summarising what follows below.
 What is this paper about? What is discussed? Why is it of any
 consequence?
 
-The advancement of science is build on a trust in discovery of new data,
-and through the use of reproducibility, scientist can gain confidence in
-their research concluded data. But in recent time, the community have
-been getting reports on more peer-reviewed preclinical studies that are
-none reproducible(McNutt, 2014).
+The advancement of science relies heavily on trust in the discovery of
+new data. Reproducibility plays a key role in building this trust, as it
+allows scientist to verify and gain confidence in the conclusions drawn
+form research. However, in recent times, the scientific community has
+raised concerns about the growing number of peer-reviewed preclinical
+studies that cannot be reproduced(McNutt, 2014).
 
-In this paper we will look more in to reproducibility of scientific
-data, why its important for using to gaining trust and if its good
-enough to be consider useful for the future scientist to use. The paper
-will first present literature around the meaning of word reproducibility
-and replicate, and its use in the science world. We will then discuss if
-reproducibility is necessary or if the scientific data can be
-replicated. How the use of R and a quarto document can help with
-reproducibility of research, any problems that can which may occur and
-if we can solve them. In the need we will try to conclude these
-questions and what our thoughts on the subject of reproducibility of
-scientific data.
+In this paper, we will explore the concept of reproducibility in
+scientific research, why it is important for building trust and whether
+current practices are sufficient to ensure its reliability for future
+scientists. We begin by reviewing the literature to clarify the
+definitions and distinctions between ``reproducibility'' and ''
+replicability'' and their roles in the scientific process. Next, we will
+discuss whether reproduccibility is essential or if replication alone
+can be considered adequate. We will also examine hoew tools such as R
+and Quarto documents can enhance research reproducibility, identify
+common challenges in this process, and consider possible solutions.
+Finally, we will conclude by reflection on these issues and sharing our
+perspective on the state and future of reproducibility in scientific
+data.
 
 \section{Literature review}\label{literature-review}
 
@@ -246,114 +249,208 @@ scientific data.
 
 Smart stuff from others about the topic.
 
-The cover story of The Economist ``How Science goes wrong'' uses the
-terms for reproducibility from (Barba, n.d.) which is
-``\emph{Reproducibility refers to the instance in which the original
-researcher's data and computer codes are used to regenerate the results,
-and arriving at the same results using their own data and methods}''.
-While from the same review paper the term of replicability can viewed as
-an ``\emph{instances in which a resarcher collects new data to arrive at
-the same scientific findings as a previous study,''} or \emph{''a
-different team arriving at the same results using the original authors
-artifacts''.} With this we have a understanding that the terms of
-reproducibility and replicability can overlap one another but can be
-used differently. Another term is generalizability, where the results of
-a study can be applied on any other context or population which is
-different from the original case study. These three terms would refers
-to the science that is''robust and reliable'' which is the foundation of
-all scientific development for the ability to build on prior work. Here
-we will try to focus on the use of reproducibility of scientific data.
+THe cover story of The Economist, titled ``How Science Goes Wrong'',
+adopts the terminology for reproducibility from (Barba, n.d.), defining
+it as the ability to regenerate results using the original researcher's
+data and code. In contrast, the same source describes replicability as
+either the process of collecting new data to arrive at the same
+scientific findings as a previous study, or when an independent research
+team reproduces the results using the original author's materials. These
+definitions highlight that while reproducibility and replicability are
+closely related and sometimes overlapping, they refer to distinct
+aspects of scientific validation.
 
-The reproducibility is a necessary, but not sufficient condition for
-replicability. Peng (2011) Discusses that reproducibility for a
-publication should be a minimal requirement. As said earlier that
-reproducibility is a way for the scientist to gain confident and trust
-in their research but what is a research reproducibility? Goodman et al.
-(2016) gives us three explanations of what research reproducibiliy
-means:
+Another important concept is generalizability, which refers to the
+extent to which the results of a study can be applied to different
+contexts or populations beyond the original study setting. Together,
+reproducibility, replicability and generalizability contribute to what
+is often described as robust and reliable science, a foundation
+essential for scientific progress and the ability to build confidently
+on prior research.
+
+In this paper, we will focus primarily on the role of reproducibility in
+scientific data and its importance in maintaining the integrity and
+trustworthiness of research.
+
+Reproducibility is a necessary, but not sufficient, condition for
+replicability. As noted by Peng (2011), reproducibility should be
+considered a minimum requirement for scientific publications. As
+previously discussed, reproducibility helps scientists build confidence
+and trust in their findings---but what exactly does ``research
+reproducibility'' mean?
+
+Goodman et al. (2016) outlines three distinct dimensions of research
+reproducibility:
 
 \begin{itemize}
+\tightlist
 \item
-  Methods reproducibility, which is how the provision of enough detail
-  about study procedures and data can be used to repeat the same
-  research in theory and in actuality.
+  \textbf{Methods reproducibility} -- This refers to providing
+  sufficient detail about the study's procedures and data so that the
+  same research can be repeated, both theoretically and in practice.
 \item
-  Results reproducibility, also described as replicabilty, is refered to
-  obtain the same results from previously research when conducting
-  independent studys but the process is the same as the original
-  research.
+  \textbf{Results reproducibility} (also referred to as
+  \emph{replicability}) -- This involves obtaining the same results as a
+  previous study when conducting an independent study using the same
+  methodology.
 \item
-  Robustness and generalizability are two terms that can be used instead
-  of the term reproducibility, where robustness means the stability of a
-  experimental conclusion when it is either a baseline assumptions or
-  experimental procedures. Generalizability can be refereed to the
-  persistence of an effect in settings different from and outside of
-  experimental framework.
+  \textbf{Robustness and generalizability} -- While sometimes used
+  interchangeably with reproducibility, these terms highlight additional
+  aspects of scientific reliability. \emph{Robustness} refers to the
+  stability of experimental conclusions under variations in baseline
+  assumptions or procedures. \emph{Generalizability}, on the other hand,
+  refers to the extent to which a study's findings remain valid in
+  different settings or populations outside the original experimental
+  framework.
 \end{itemize}
+
+Together, these concepts form a broader understanding of what it means
+for scientific research to be reliable and trustworthy.
 
 \section{Publication bias}\label{publication-bias}
 
-When it comes to publication on reproducibility one can encounter
-publication bias which may affect the ability to publish the findings.
-The worst case if a scientific journals contains a big collection of the
-type 1 error. So what is type 1 error? Its the definition of a
-incorrectly concluding of the research. (kilde) Its the size of the
-error which the researcher is willing to accept prior to the hypothesis
-test. Type 1 error is when H0 is rejected even if its true. It can be
-about concluding that there is an effect even when its not. This way we
-may end up with similar studies with no effect but there can be a risk
-that we would find the wrong conclusion in the literature. This will
-hurt later research that tries to replicate the experiment. An exempel
-on this is the ``File Drawer Problem'' from Rosenthal (1979), where
-studies with an H0 that can not be rejectet is sent to the file drawer
-and the ones where H0 is rejected is published. This will go on to
-create false positive. If prestigious journals manage to publish an
-research with a false positive it will make it so that others will have
-little motivation to try to reproduce it. Another error that can occur
-is that its costly to invest in a research program which in the end will
-create more false positive and may lead to ineffective policy changes. A
-field that is known to publish research with false positive would surly
-risk losing its credibility and trust from other scientist (Simmons et
-al., 2011). The Young et al. (2008) tells that its ``\emph{more alarming
-is the general paucity in the literature of negative data. In some
-fields, almost all published studies sow formally significant results so
-that statistical significance no longer appears discriminating}''. The
-publication bias will also have effect on meta-analysis, which is an
-combined result of multiple scientific studies(Russo, 2007). So when one
-result is influenced by publication bias, the others may feel its
-effect.
+When discussing reproducibility in scientific research, one major
+challenge is \emph{publication bias}, which can significantly affect the
+ability to publish findings. This bias can lead to a disproportionate
+representation of positive results in the literature, while studies
+reporting null or negative results are often left unpublished.
 
-So when it comes it economic and how to be able to reproduce the
-research, one can look at an old journal the ``Econometrica'' where
-Frisch (1933) states that ``\emph{Statistical and other numerical work
-presented in Econometrica, the original raw data will, as a rule, be
-published, unless their volume is excessive}''. This states that all the
-data ones used in its research should be presented if possible. But as
-time passes, bigger models was needed to present the data which ended up
-in researchers only publicing the results and the reproducing or
-replicating of the research ended up nearly impossible. Solutions had to
-be created for archiving the data, one was the American Economic
-Association data archive(\emph{American {Economic Association}}, n.d.).
-McCullough et al. (2008) points that ``\emph{All the long-standing
-archives at economics journals do not facilitate the re-production of
-published results. The data-only archives at Journal of business and
-Economic Statistics and Economic Journal fail in part because most
-authors do not contribute data}''. With other words, the solution didn't
-work as one hoped for. Another solution is the ``computable documents''
-solution that uses codes integral in the article, so that the research
-can be submitted with the data necessary to fully be able to reproduce
-the research.
+One serious consequence of publication bias is the increased risk of
+Type I errors, false positives. A \emph{Type I error} occurs when the
+null hypothesis (H₀) is incorrectly rejected, meaning we conclude that
+there is an effect when, in fact, none exists. The significance level
+(commonly denoted as α) represents the probability of making this kind
+of error and reflects the level of risk the researcher is willing to
+accept before conducting the hypothesis test (\emph{Type i and Type II
+Errors}, n.d.).
 
-Use a least 20 citations, a least 5 of them must be new (not from the
-provided .bib file).
+If scientific journals systematically favor studies that reject the null
+hypothesis, the literature may become saturated with false positives.
+This situation undermines the foundation of future research, especially
+when later studies attempt (and fail) to replicate the original
+findings. One well-known example of this issue is the \emph{``File
+Drawer Problem''} described by Rosenthal (1979), where studies that fail
+to reject the null hypothesis are effectively ``filed away'' and never
+published, while only statistically significant results make it to
+print. This selective publication practice skews the overall body of
+evidence, making false positives more likely.
 
-Use both in-line and normal citations.
+The implications are far-reaching. If a prestigious journal publishes a
+study with a false positive, it may discourage replication efforts due
+to the perceived credibility of the source. Additionally, investing
+resources into research programs based on such flawed findings can be
+costly and may lead to ineffective or even harmful policy decisions.
 
-Example:
+Fields that regularly publish false positives risk losing credibility
+and the trust of the scientific community (Simmons et al., 2011). As
+Young et al. (2008) notes, \emph{``More alarming is the general paucity
+in the literature of negative data. In some fields, almost all published
+studies show formally significant results, so that statistical
+significance no longer appears discriminating.''} This lack of negative
+results contributes further to the distortion of the scientific record.
 
-(\textbf{gentleman2005?}) argues that bla bla bla. On the other hand
-it's claimed that bla bla (\textbf{barbalorenaa.2018?};
-\textbf{bartlett2008?}).
+Publication bias also compromises meta-analyses, which aggregate data
+from multiple studies to draw broader conclusions (Russo, 2007). If the
+individual studies included are themselves biased toward positive
+findings, the meta-analytic results will also be skewed, compounding the
+problem.
+
+In short, addressing publication bias is essential to preserving the
+reliability, replicability, and credibility of scientific research.
+
+When it comes to economics and the issue of research reproducibility,
+historical efforts can be traced back to journals like
+\emph{Econometrica}. In an editorial note, Frisch (1933) emphasized the
+importance of transparency, stating: \emph{``Statistical and other
+numerical work presented in Econometrica, the original raw data will, as
+a rule, be published, unless their volume is excessive''}. This reflects
+an early recognition that making data publicly available is essential
+for reproducibility.
+
+However, over time, as economic research grew in complexity and scale,
+models became larger and more computationally intensive. As a result,
+researchers began publishing only final results, while the raw data and
+underlying code were often omitted. This shift made it increasingly
+difficult---if not impossible---for others to replicate or reproduce
+published findings.
+
+To address this problem, various solutions were proposed. One such
+initiative was the creation of data archives, such as the American
+Economic Association (AEA) data repository (\emph{American {Economic
+Association}}, n.d.), aimed at preserving and sharing datasets used in
+published research. However, these archives often fell short of their
+goal. As McCullough et al. (2008) points out: \emph{``All the
+long-standing archives at economics journals do not facilitate the
+reproduction of published results. The data-only archives at the Journal
+of Business and Economic Statistics and the Economic Journal fail in
+part because most authors do not contribute data.''} In other words, the
+mere existence of archives was insufficient---author compliance was
+inconsistent, and critical components such as code and documentation
+were often missing.
+
+A more robust solution emerged in the form of \textbf{computable
+documents}---research articles that integrate text, data, and executable
+code in a single, reproducible format. This approach allows other
+researchers to fully reproduce the original study, including data
+preparation, model estimation, and results generation.
+
+One example of this is \textbf{WaveLab}, a software package designed to
+reproduce figures from published wavelet research. Developed with
+reproducibility in mind, WaveLab includes all the source code required
+to replicate results {[}\emph{WaveLab and Reproducible Research
+\textbar{} SpringerLink} (n.d.); {]}. The authors encouraged readers to
+inspect and use the code, promoting what they called ``really
+reproducible'' research.
+
+Gentleman (2007) reinforces this idea by emphasizing the role of
+software in enabling reproducibility: \emph{``The step from
+disseminating analyses via a compendium to reproducible research is a
+small one. By reproducible research, we mean research papers with
+accompanying software tools that allow the reader to directly reproduce
+the results and employ the methods that are presented in the research
+paper''} (Gentleman \& Temple Lang, 2007).
+
+In this model, the article itself includes:
+
+\begin{itemize}
+\item
+  The research text
+\item
+  Code to import and clean the data,
+\item
+  Code for model estimation and testing,
+\item
+  And code to generate the final results.
+\end{itemize}
+
+By submitting such materials alongside the manuscript, the research
+becomes fully transparent and reproducible. This not only strengthens
+the credibility of the work but also enables future researchers to build
+on it more effectively.
+
+To implement effective data archiving and reproducible research, tools
+such as \textbf{Sweave} were originally developed to integrate code and
+documentation. Sweave, the predecessor of \textbf{knitr}, allowed users
+to embed R code within LaTeX documents to dynamically generate reports
+(\emph{Sweave}, n.d.).
+
+Today, \textbf{knitr} is the more widely used and advanced tool, fully
+supported within \textbf{RStudio}. RStudio itself is an evolution of
+earlier tools like the R Notebook and offers an integrated development
+environment (IDE) that allows users to run code in \textbf{sequential
+chunks}, while also enabling individual execution for experimentation
+and debugging (Lander, 2017).
+
+RStudio supports the full data science workflow: it helps structure and
+clean data, perform transformations, visualize results, and build
+statistical or machine learning models. One powerful feature is the use
+of \textbf{Quarto} documents, which allow users to combine narrative
+text with code in a single file. These documents can be rendered into
+multiple output formats---including HTML, PDF, Word, and presentation
+slides---making it easy to share fully reproducible research reports.
+
+By using these tools, researchers can ensure that their analyses are
+transparent, replicable, and accessible to others.
 
 \section{Discussion of the reseach
 question}\label{discussion-of-the-reseach-question}
@@ -396,10 +493,19 @@ Barba, L. A. (n.d.). \emph{Terminologies for reproducible research}.
 Frisch, R. (1933). Editor's note. \emph{Econometrica}, \emph{1}(1),
 1--4. \url{https://www.jstor.org/stable/1912224}
 
+\bibitem[\citeproctext]{ref-gentleman2007b}
+Gentleman, R., \& Temple Lang, D. (2007). Statistical {Analyses} and
+{Reproducible Research}. \emph{Journal of Computational and Graphical
+Statistics}, \emph{16}(1), 1--23.
+
 \bibitem[\citeproctext]{ref-goodman2016b}
 Goodman, S. N., Fanelli, D., \& Ioannidis, J. P. A. (2016). What does
 research reproducibility mean? \emph{Science Translational Medicine},
 \emph{8}(341), 341ps12--341ps12.
+
+\bibitem[\citeproctext]{ref-landerEveryoneAdvancedAnalytics2017}
+Lander, J. P. (2017). \emph{R for everyone: Advanced analytics and
+graphics} (Second edition). Addison-Wesley, Pearson.
 
 \bibitem[\citeproctext]{ref-mccullough2008a}
 McCullough, B. D., McGeary, K. A., \& Harrison, T. D. (2008). Do
@@ -431,6 +537,21 @@ Simmons, J. P., Nelson, L. D., \& Simonsohn, U. (2011). False-positive
 psychology: {Undisclosed} flexibility in data collection and analysis
 allows presenting anything as significant. \emph{Psychological Science},
 \emph{22}(11), 1359--1366.
+
+\bibitem[\citeproctext]{ref-SweaveDynamicGeneration}
+\emph{Sweave: Dynamic generation of statistical reports using literate
+data analysis \textbar{} SpringerLink}. (n.d.).
+\url{https://link.springer.com/chapter/10.1007/978-3-642-57489-4_89}
+
+\bibitem[\citeproctext]{ref-TypeTypeII}
+\emph{Type i and type II errors: What are they and why do they matter? -
+c j smith, 2012}. (n.d.).
+\url{https://journals.sagepub.com/doi/10.1258/phleb.2012.012j04}
+
+\bibitem[\citeproctext]{ref-WaveLabReproducibleResearch}
+\emph{WaveLab and reproducible research \textbar{} SpringerLink}.
+(n.d.).
+\url{https://link.springer.com/chapter/10.1007/978-1-4612-2544-7_5}
 
 \bibitem[\citeproctext]{ref-young2008}
 Young, N. S., Ioannidis, J. P. A., \& Al-Ubaydli, O. (2008). Why
