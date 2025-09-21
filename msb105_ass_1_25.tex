@@ -211,16 +211,9 @@
 \date{18,09,2025}
 \begin{document}
 \maketitle
-\begin{abstract}
-A very short abstract. Put the abstract text here. One or two paragraphs
-summarising what follows below.
-\end{abstract}
 
 
 \section{Introduction}\label{introduction}
-
-What is this paper about? What is discussed? Why is it of any
-consequence?
 
 The advancement of science relies heavily on trust in the discovery of
 new data. Reproducibility plays a key role in building this trust, as it
@@ -246,8 +239,6 @@ data.
 \section{Literature review}\label{literature-review}
 
 \section{Theory on reproducibility}\label{theory-on-reproducibility}
-
-Smart stuff from others about the topic.
 
 THe cover story of The Economist, titled ``How Science Goes Wrong'',
 adopts the terminology for reproducibility from (Barba, n.d.), defining
@@ -371,7 +362,7 @@ However, over time, as economic research grew in complexity and scale,
 models became larger and more computationally intensive. As a result,
 researchers began publishing only final results, while the raw data and
 underlying code were often omitted. This shift made it increasingly
-difficult---if not impossible---for others to replicate or reproduce
+difficult if not impossible for others to replicate or reproduce
 published findings.
 
 To address this problem, various solutions were proposed. One such
@@ -388,19 +379,19 @@ mere existence of archives was insufficient---author compliance was
 inconsistent, and critical components such as code and documentation
 were often missing.
 
-A more robust solution emerged in the form of \textbf{computable
-documents}---research articles that integrate text, data, and executable
-code in a single, reproducible format. This approach allows other
-researchers to fully reproduce the original study, including data
-preparation, model estimation, and results generation.
+A more robust solution emerged in the form of computable documents
+research articles that integrate text, data, and executable code in a
+single, reproducible format. This approach allows other researchers to
+fully reproduce the original study, including data preparation, model
+estimation, and results generation.
 
-One example of this is \textbf{WaveLab}, a software package designed to
-reproduce figures from published wavelet research. Developed with
-reproducibility in mind, WaveLab includes all the source code required
-to replicate results {[}\emph{WaveLab and Reproducible Research
-\textbar{} SpringerLink} (n.d.); {]}. The authors encouraged readers to
-inspect and use the code, promoting what they called ``really
-reproducible'' research.
+One example of this is WaveLab, a software package designed to reproduce
+figures from published wavelet research. Developed with reproducibility
+in mind, WaveLab includes all the source code required to replicate
+results {[}\emph{WaveLab and Reproducible Research \textbar{}
+SpringerLink} (n.d.); {]}. The authors encouraged readers to inspect and
+use the code, promoting what they called ``really reproducible''
+research.
 
 Gentleman (2007) reinforces this idea by emphasizing the role of
 software in enabling reproducibility: \emph{``The step from
@@ -429,55 +420,172 @@ the credibility of the work but also enables future researchers to build
 on it more effectively.
 
 To implement effective data archiving and reproducible research, tools
-such as \textbf{Sweave} were originally developed to integrate code and
-documentation. Sweave, the predecessor of \textbf{knitr}, allowed users
-to embed R code within LaTeX documents to dynamically generate reports
+such as Sweave were originally developed to integrate code and
+documentation. Sweave, the predecessor of knitr, allowed users to embed
+R code within LaTeX documents to dynamically generate reports
 (\emph{Sweave}, n.d.).
 
-Today, \textbf{knitr} is the more widely used and advanced tool, fully
-supported within \textbf{RStudio}. RStudio itself is an evolution of
-earlier tools like the R Notebook and offers an integrated development
-environment (IDE) that allows users to run code in \textbf{sequential
-chunks}, while also enabling individual execution for experimentation
-and debugging (Lander, 2017).
+Today, knitr is the more widely used and advanced tool, fully supported
+within RStudio. RStudio itself is an evolution of earlier tools like the
+R Notebook and offers an integrated development environment (IDE) that
+allows users to run code in sequentialchunks, while also enabling
+individual execution for experimentation and debugging (Lander, 2017).
 
 RStudio supports the full data science workflow: it helps structure and
 clean data, perform transformations, visualize results, and build
 statistical or machine learning models. One powerful feature is the use
-of \textbf{Quarto} documents, which allow users to combine narrative
-text with code in a single file. These documents can be rendered into
-multiple output formats---including HTML, PDF, Word, and presentation
+of Quarto documents, which allow users to combine narrative text with
+code in a single file. These documents can be rendered into multiple
+output formats---including HTML, PDF, Word, and presentation
 slides---making it easy to share fully reproducible research reports.
 
 By using these tools, researchers can ensure that their analyses are
 transparent, replicable, and accessible to others.
 
-\section{Discussion of the reseach
-question}\label{discussion-of-the-reseach-question}
+\section{Discussion of the research
+question}\label{discussion-of-the-research-question}
 
-\begin{itemize}
-\tightlist
-\item
-  Should replicability be the norm or is this to much to ask for now?
-\item
-  Can Quarto documents help with reproducibility?
-\item
-  What problems remains and how can these be solved?
-\end{itemize}
+Replicability \emph{should} be the norm in scientific research, and
+while it presents challenges, expecting it is not too much to ask---it
+is, in fact, essential for credible and trustworthy science.
+
+Historically, even early journals like \emph{Econometrica} emphasized
+the importance of transparency. As Frisch (1933) noted, raw data should
+be published alongside statistical work unless prohibitively large
+(Frisch, 1933). This shows that the value of replicability was
+acknowledged from the beginning. However, as research became more
+complex and models more data-intensive, researchers increasingly
+published only results, making it nearly impossible for others to
+replicate their work.
+
+Solutions like the American Economic Association's data archive were a
+step forward, but they often failed in practice because many authors did
+not submit their data (McCullough et al., 2008). This highlights that
+infrastructure alone isn't enough stronger cultural and institutional
+expectations are needed.
+
+More promising are tools that support computable documents, such as
+knitr and Quarto in RStudio, which allow researchers to embed code,
+data, and analysis directly within documents. These tools make
+replicability not only possible but practical. They allow for seamless
+integration of text, code, and output, which can be rendered into
+shareable formats like HTML, PDF, or slides. With these modern tools,
+the barriers to replicable research are significantly lower than they
+once were.
+
+In short, while replicability may have seemed burdensome in the past,
+today's tools have made it far more achievable. As the cost of
+irreproducible research grows---damaging trust, wasting resources, and
+leading to false conclusions---it becomes increasingly clear that
+replicability is not an unreasonable demand. Instead, it should be a
+standard practice that protects the integrity and progress of science.
+
+Yes, Quarto documents can significantly help with reproducibility by
+allowing researchers to combine code, data, analysis, and narrative in a
+single, integrated document.
+
+As discussed, tools like Sweave and later knitr paved the way for
+embedding code into research documents, enabling dynamic report
+generation (\emph{Sweave}, n.d.). Today, RStudio, building on these
+foundations, supports Quarto, a modern tool designed specifically for
+reproducible research workflows. Quarto allows researchers to write
+documents that include both the text of their analysis and the
+underlying code that generates the results.
+
+What makes Quarto especially powerful is its flexibility: researchers
+can use it to generate outputs in various formats---including HTML, PDF,
+Word, and slides all from the same source file. This means a single
+Quarto document can serve both as a scientific report and as a
+reproducibility package. Code chunks can be run individually for testing
+or sequentially for full analysis, and because the document includes
+both the data-processing steps and the models, readers can see exactly
+how the results were generated.
+
+By using Quarto, researchers reduce ambiguity, eliminate manual errors,
+and make it easier for others to validate, understand, and build upon
+their work. It supports the broader goal of ``really reproducible
+research,'' as described in efforts like WaveLab and in the principles
+set out by Gentleman \& Temple Lang (2007), who emphasized that
+reproducible research means papers accompanied by the actual tools
+needed to regenerate results.
+
+In short, Quarto is a practical and powerful solution for making
+reproducibility not just possible, but efficient and well-integrated
+into the research process.
+
+Despite major advancements in tools and workflows that support
+reproducibility, such as Quarto, knitr, and data archives, several key
+problems still remain.
+
+One major issue is incomplete data and code sharing. While journals and
+organizations like the American Economic Association have created data
+archives, these often fall short because many authors do not contribute
+their data or fail to provide sufficient documentation or code
+(McCullough et al., 2008). Without access to the exact datasets and the
+code used in analysis, reproducibility becomes impossible, regardless of
+available tools.
+
+Another persistent problem is cultural and institutional inertia.
+Although tools like RStudio and Quarto make reproducibility easier than
+ever, many researchers still do not adopt these practices. There may be
+a lack of incentives, a fear of being scooped, or simply insufficient
+training. As a result, many studies continue to be published without the
+necessary materials for replication, and efforts like computable
+documents remain underutilized.
+
+Additionally, technical barriers still exist for some users. While tools
+like Quarto are powerful, they require familiarity with R, LaTeX,
+markdown, and version control systems, all of which can be intimidating
+to researchers without a computational background.
 
 \section{Conclusion}\label{conclusion}
 
-\section{References}\label{references}
-
-and
+So how can we look at these problems?
 
 \begin{itemize}
 \tightlist
 \item
-  Version number and reference to packages used
+  Enforce data and code availability policies: Journals and funding
+  bodies should require that authors submit both datasets and code used
+  for analysis as a condition for publication. This should be monitored
+  and enforced, not just encouraged.
 \item
-  R version used
+  Promote and normalize the use of reproducible tools: More training and
+  education should be offered to help researchers adopt tools like
+  RStudio and Quarto. Universities, research institutions, and
+  conferences should prioritize workshops and resources on reproducible
+  workflows.
+\item
+  Standardize reproducible workflows: Encouraging the use of
+  ``computable documents'' as a standard format---where all text, code,
+  and data are embedded---can simplify expectations and promote
+  consistency across disciplines.
+\item
+  Recognize and reward reproducible research: Researchers who go the
+  extra mile to ensure their work is fully transparent and replicable
+  should be recognized through citations, awards, or funding
+  opportunities.
+\item
+  Lower technical barriers: Continued development of user-friendly
+  tools, interfaces, and templates can make reproducible research more
+  accessible to non-technical users.
 \end{itemize}
+
+In conclusion, while powerful solutions now exist to make
+reproducibility achievable, real change requires a cultural shift one
+that embraces transparency, provides proper incentives, and equips
+researchers with both the tools and the training to adopt reproducible
+practices across the board
+
+\section{References}\label{references}
+
+R version 4.5.1 (2025-06-13 ucrt) Platform: x86\_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26100) Matrix products: default
+LAPACK version 3.12.1 locale: {[}1{]} C time zone: Europe/Oslo tzcode
+source: internal attached base packages: {[}1{]} stats graphics
+grDevices utils datasets methods base loaded via a namespace (and not
+attached): {[}1{]} compiler\_4.5.1 cli\_3.6.5 rsconnect\_1.5.1
+tools\_4.5.1 rstudioapi\_0.17.1 lifecycle\_1.0.4 {[}7{]} rlang\_1.1.6
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}

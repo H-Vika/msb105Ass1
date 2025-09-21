@@ -16,7 +16,7 @@ format:
     papersize: A4
     fig-pos: "H"
 bibliography: reproducibility.bib
-abstract: "This text explores the ongoing challenges and solutions related to reproducibility in economic research. While early efforts, such as those by Econometrica, emphasized data transparency, increasing model complexity over time made replication difficult. Modern tools such as RStudio, knitr, and Quarto now enable the integration of code, data, and analysis into fully reproducible documents. However, problems remain, including poor compliance with data-sharing policies, lack of incentives, and technical barriers. Addressing these issues requires stronger enforcement, cultural change, and broader access to training and user-friendly tools.""
+abstract: "This text explores the ongoing challenges and solutions related to reproducibility in economic research. While early efforts, such as those by Econometrica, emphasized data transparency, increasing model complexity over time made replication difficult. Modern tools such as RStudio, knitr, and Quarto now enable the integration of code, data, and analysis into fully reproducible documents. However, problems remain, including poor compliance with data-sharing policies, lack of incentives, and technical barriers. Addressing these issues requires stronger enforcement, cultural change, and broader access to training and user-friendly tools"
 ---
 
 ## Introduction
