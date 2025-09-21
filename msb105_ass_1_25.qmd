@@ -129,7 +129,7 @@ These documents can be rendered into multiple output formats—including HTML, P
 
 By using these tools, researchers can ensure that their analyses are transparent, replicable, and accessible to others.
 
-## Discussion of the reseach question
+## Discussion of the research question
 
 Replicability *should* be the norm in scientific research, and while it presents challenges, expecting it is not too much to ask—it is, in fact, essential for credible and trustworthy science.
 
