@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -45,25 +45,24 @@ div.csl-indent {
 
 
 <script src="msb105_ass_1_25_files/libs/clipboard/clipboard.min.js"></script>
-<script src="msb105_ass_1_25_files/libs/quarto-html/quarto.js" type="module"></script>
-<script src="msb105_ass_1_25_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="msb105_ass_1_25_files/libs/quarto-html/quarto.js"></script>
 <script src="msb105_ass_1_25_files/libs/quarto-html/popper.min.js"></script>
 <script src="msb105_ass_1_25_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="msb105_ass_1_25_files/libs/quarto-html/anchor.min.js"></script>
 <link href="msb105_ass_1_25_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="msb105_ass_1_25_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="msb105_ass_1_25_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="msb105_ass_1_25_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="msb105_ass_1_25_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="msb105_ass_1_25_files/libs/bootstrap/bootstrap-bb462d781dde1847d9e3ccf7736099dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="msb105_ass_1_25_files/libs/bootstrap/bootstrap-973236bd072d72a04ee9cd82dcc9cb29.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
 
-<body class="quarto-light">
+<body>
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="msb105_ass_1_25.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li><li><a href="msb105_ass_1_25.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="msb105_ass_1_25.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li><li><a href="msb105_ass_1_25_tex.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="msb105_ass_1_25.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -103,62 +102,86 @@ div.csl-indent {
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>The advancement of science relies heavily on trust in the discovery of new data. Reproducibility plays a key role in building this trust, as it allows scientist to verify and gain confidence in the conclusions drawn form research. However, in recent times, the scientific community has raised concerns about the growing number of peer-reviewed preclinical studies that cannot be reproduced<span class="citation" data-cites="mcnutt2014">(<a href="#ref-mcnutt2014" role="doc-biblioref">McNutt, 2014</a>)</span>.</p>
-<p>In this paper, we will explore the concept of reproducibility in scientific research, why it is important for building trust and whether current practices are sufficient to ensure its reliability for future scientists. We begin by reviewing the literature to clarify the definitions and distinctions between “reproducibility” and ” replicability” and their roles in the scientific process. Next, we will discuss whether reproduccibility is essential or if replication alone can be considered adequate. We will also examine hoew tools such as R and Quarto documents can enhance research reproducibility, identify common challenges in this process, and consider possible solutions. Finally, we will conclude by reflection on these issues and sharing our perspective on the state and future of reproducibility in scientific data.</p>
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
+<p>The advancement of science relies heavily on trust in the discovery of new data. Reproducibility plays a key role in building this trust, as it allows scientist to verify and gain confidence in the conclusions drawn form research. However, in recent times, the scientific community has raised concerns about the growing number of peer-reviewed preclinical studies that cannot be reproduced <span class="citation" data-cites="mcnutt2014">(<a href="#ref-mcnutt2014" role="doc-biblioref">McNutt, 2014</a>)</span>.</p>
+<p>In this paper, we will explore the concept of reproducibility in scientific research, why it is important for building trust and whether current practices are sufficient to ensure its reliability for future scientists. We begin by reviewing the literature to clarify the definitions and distinctions between “reproducibility” and ” replicability” and their roles in the scientific process. Next, we will discuss whether replicability is essential or if reproducibility alone can be considered adequate. We will also examine how tools such as R and Quarto documents can enhance research reproducibility, identify common challenges in this process, and consider possible solutions. Finally, we will conclude by reflection on these issues and sharing our perspective on the state and future of reproducibility in scientific data.</p>
 </section>
-<section id="literature-review" class="level2">
-<h2 class="anchored" data-anchor-id="literature-review">Literature review</h2>
+<section id="literature-review" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="literature-review"><span class="header-section-number">2</span> Literature review</h2>
 </section>
-<section id="theory-on-reproducibility" class="level2">
-<h2 class="anchored" data-anchor-id="theory-on-reproducibility">Theory on reproducibility</h2>
-<p>THe cover story of The Economist, titled “How Science Goes Wrong”, adopts the terminology for reproducibility from <span class="citation" data-cites="barbaTerminologiesReproducibleResearch2018">(<a href="#ref-barbaTerminologiesReproducibleResearch2018" role="doc-biblioref">Barba, n.d.</a>)</span>, defining it as the ability to regenerate results using the original researcher’s data and code. In contrast, the same source describes replicability as either the process of collecting new data to arrive at the same scientific findings as a previous study, or when an independent research team reproduces the results using the original author’s materials. These definitions highlight that while reproducibility and replicability are closely related and sometimes overlapping, they refer to distinct aspects of scientific validation.</p>
-<p>Another important concept is generalizability, which refers to the extent to which the results of a study can be applied to different contexts or populations beyond the original study setting. Together, reproducibility, replicability and generalizability contribute to what is often described as robust and reliable science, a foundation essential for scientific progress and the ability to build confidently on prior research.</p>
+<section id="theory-on-reproducibility" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="theory-on-reproducibility"><span class="header-section-number">3</span> Theory on reproducibility</h2>
+<p>The cover story of The Economist, titled “How Science Goes Wrong”, adopts the terminology for reproducibility from <span class="citation" data-cites="barbaTerminologiesReproducibleResearch2018">(<a href="#ref-barbaTerminologiesReproducibleResearch2018" role="doc-biblioref">Barba, n.d.</a>)</span>, defining it as the ability to regenerate results using the original researcher’s data and code. In contrast, the same source describes replicability as either the process of collecting new data to arrive at the same scientific findings as a previous study, or when an independent research team reproduces the results using the original author’s materials. These definitions highlight that while reproducibility and replicability are closely related and sometimes overlapping, they refer to distinct aspects of scientific validation.</p>
+<p>Another important concept is generalizability, which refers to the extent to which the results of a study can be applied to different contexts or populations beyond the original study setting. Together, reproducibility, replicability and generalizability contribute to what is often described as robust and reliable science. This is an essential foundation for scientific progress and the ability to build confidently on prior research.</p>
 <p>In this paper, we will focus primarily on the role of reproducibility in scientific data and its importance in maintaining the integrity and trustworthiness of research.</p>
-<p>Reproducibility is a necessary, but not sufficient, condition for replicability. As noted by <span class="citation" data-cites="peng2011">Peng (<a href="#ref-peng2011" role="doc-biblioref">2011</a>)</span>, reproducibility should be considered a minimum requirement for scientific publications. As previously discussed, reproducibility helps scientists build confidence and trust in their findings—but what exactly does “research reproducibility” mean?</p>
+<p>Reproducibility is a necessary, but not sufficient, condition for replicability. As noted by <span class="citation" data-cites="peng2011">Peng (<a href="#ref-peng2011" role="doc-biblioref">2011</a>)</span>, reproducibility should be considered a minimum requirement for scientific publications. As previously discussed, reproducibility help scientists build confidence and trust in their findings—but what exactly does “research reproducibility” mean?</p>
 <p><span class="citation" data-cites="goodman2016b">Goodman et al. (<a href="#ref-goodman2016b" role="doc-biblioref">2016</a>)</span> outlines three distinct dimensions of research reproducibility:</p>
-<ul>
-<li><strong>Methods reproducibility</strong> – This refers to providing sufficient detail about the study’s procedures and data so that the same research can be repeated, both theoretically and in practice.</li>
-<li><strong>Results reproducibility</strong> (also referred to as <em>replicability</em>) – This involves obtaining the same results as a previous study when conducting an independent study using the same methodology.</li>
-<li><strong>Robustness and generalizability</strong> – While sometimes used interchangeably with reproducibility, these terms highlight additional aspects of scientific reliability. <em>Robustness</em> refers to the stability of experimental conclusions under variations in baseline assumptions or procedures. <em>Generalizability</em>, on the other hand, refers to the extent to which a study’s findings remain valid in different settings or populations outside the original experimental framework.</li>
-</ul>
+<dl>
+<dt>Methods reproducibility</dt>
+<dd>
+<p>This refers to providing sufficient detail about the study’s procedures and data so that the same research can be repeated, both theoretically and in practice.</p>
+</dd>
+<dt>Results reproducibility</dt>
+<dd>
+<p>(also referred to as <em>replicability</em>) – This involves obtaining the same results as a previous study when conducting an independent study using the same methodology.</p>
+</dd>
+<dt>Robustness and generalizability</dt>
+<dd>
+<p>While sometimes used interchangeably with reproducibility, these terms highlight additional aspects of scientific reliability. <em>Robustness</em> refers to the stability of experimental conclusions under variations in baseline assumptions or procedures. <em>Generalizability</em>, on the other hand, refers to the extent to which a study’s findings remain valid in different settings or populations outside the original experimental framework.</p>
+</dd>
+</dl>
 <p>Together, these concepts form a broader understanding of what it means for scientific research to be reliable and trustworthy.</p>
 </section>
-<section id="publication-bias" class="level2">
-<h2 class="anchored" data-anchor-id="publication-bias">Publication bias</h2>
+<section id="publication-bias" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="publication-bias"><span class="header-section-number">4</span> Publication bias</h2>
 <p>When discussing reproducibility in scientific research, one major challenge is <em>publication bias</em>, which can significantly affect the ability to publish findings. This bias can lead to a disproportionate representation of positive results in the literature, while studies reporting null or negative results are often left unpublished.</p>
 <p>One serious consequence of publication bias is the increased risk of Type I errors, false positives. A <em>Type I error</em> occurs when the null hypothesis (H₀) is incorrectly rejected, meaning we conclude that there is an effect when, in fact, none exists. The significance level (commonly denoted as α) represents the probability of making this kind of error and reflects the level of risk the researcher is willing to accept before conducting the hypothesis test <span class="citation" data-cites="TypeTypeII">(<a href="#ref-TypeTypeII" role="doc-biblioref"><em>Type i and Type II Errors</em>, n.d.</a>)</span>.</p>
-<p>If scientific journals systematically favor studies that reject the null hypothesis, the literature may become saturated with false positives. This situation undermines the foundation of future research, especially when later studies attempt (and fail) to replicate the original findings. One well-known example of this issue is the <em>“File Drawer Problem”</em> described by <span class="citation" data-cites="rosenthal1979">Rosenthal (<a href="#ref-rosenthal1979" role="doc-biblioref">1979</a>)</span>, where studies that fail to reject the null hypothesis are effectively “filed away” and never published, while only statistically significant results make it to print. This selective publication practice skews the overall body of evidence, making false positives more likely.</p>
+<p>If scientific journals systematically favor studies that reject the null hypothesis, the literature may become saturated with false positives. This situation undermines the foundation of future research, especially when later studies attempt (and fail) to replicate the original findings. One well-known example of this issue is the “<em>File Drawer Problem</em>” described by <span class="citation" data-cites="rosenthal1979">Rosenthal (<a href="#ref-rosenthal1979" role="doc-biblioref">1979</a>)</span>, where studies that fail to reject the null hypothesis are effectively “filed away” and never published, while only statistically significant results make it to print. This selective publication practice skews the overall body of evidence, making false positives more likely.</p>
 <p>The implications are far-reaching. If a prestigious journal publishes a study with a false positive, it may discourage replication efforts due to the perceived credibility of the source. Additionally, investing resources into research programs based on such flawed findings can be costly and may lead to ineffective or even harmful policy decisions.</p>
-<p>Fields that regularly publish false positives risk losing credibility and the trust of the scientific community <span class="citation" data-cites="simmons2011">(<a href="#ref-simmons2011" role="doc-biblioref">Simmons et al., 2011</a>)</span>. As <span class="citation" data-cites="young2008">Young et al. (<a href="#ref-young2008" role="doc-biblioref">2008</a>)</span> notes, <em>“More alarming is the general paucity in the literature of negative data. In some fields, almost all published studies show formally significant results, so that statistical significance no longer appears discriminating.”</em> This lack of negative results contributes further to the distortion of the scientific record.</p>
+<p>Fields that regularly publish false positives risk losing credibility and the trust of the scientific community <span class="citation" data-cites="simmons2011">(<a href="#ref-simmons2011" role="doc-biblioref">Simmons et al., 2011</a>)</span>. As <span class="citation" data-cites="young2008">Young et al. (<a href="#ref-young2008" role="doc-biblioref">2008</a>)</span> notes:</p>
+<blockquote class="blockquote">
+<p>“More alarming is the general paucity in the literature of negative data. In some fields, almost all published studies show formally significant results, so that statistical significance no longer appears discriminating.”</p>
+</blockquote>
+<p>This lack of negative results contributes further to the distortion of the scientific record.</p>
 <p>Publication bias also compromises meta-analyses, which aggregate data from multiple studies to draw broader conclusions <span class="citation" data-cites="russoHowReviewMetaanalysis2007">(<a href="#ref-russoHowReviewMetaanalysis2007" role="doc-biblioref">Russo, 2007</a>)</span>. If the individual studies included are themselves biased toward positive findings, the meta-analytic results will also be skewed, compounding the problem.</p>
 <p>In short, addressing publication bias is essential to preserving the reliability, replicability, and credibility of scientific research.</p>
-<p>When it comes to economics and the issue of research reproducibility, historical efforts can be traced back to journals like <em>Econometrica</em>. In an editorial note, <span class="citation" data-cites="frischEditorsNote1933">Frisch (<a href="#ref-frischEditorsNote1933" role="doc-biblioref">1933</a>)</span> emphasized the importance of transparency, stating: <em>“Statistical and other numerical work presented in Econometrica, the original raw data will, as a rule, be published, unless their volume is excessive”</em>. This reflects an early recognition that making data publicly available is essential for reproducibility.</p>
+<p>When it comes to economics and the issue of research reproducibility, historical efforts can be traced back to journals like <em>Econometrica</em>. In an editorial note, <span class="citation" data-cites="frischEditorsNote1933">Frisch (<a href="#ref-frischEditorsNote1933" role="doc-biblioref">1933</a>)</span> emphasized the importance of transparency, stating:</p>
+<blockquote class="blockquote">
+<p>“Statistical and other numerical work presented in Econometrica, the original raw data will, as a rule, be published, unless their volume is excessive”.</p>
+</blockquote>
+<p>This reflects an early recognition that making data publicly available is essential for reproducibility.</p>
 <p>However, over time, as economic research grew in complexity and scale, models became larger and more computationally intensive. As a result, researchers began publishing only final results, while the raw data and underlying code were often omitted. This shift made it increasingly difficult if not impossible for others to replicate or reproduce published findings.</p>
-<p>To address this problem, various solutions were proposed. One such initiative was the creation of data archives, such as the American Economic Association (AEA) data repository <span class="citation" data-cites="zotero-321">(<a href="#ref-zotero-321" role="doc-biblioref"><em>American <span>Economic Association</span></em>, n.d.</a>)</span>, aimed at preserving and sharing datasets used in published research. However, these archives often fell short of their goal. As <span class="citation" data-cites="mccullough2008a">McCullough et al. (<a href="#ref-mccullough2008a" role="doc-biblioref">2008</a>)</span> points out: <em>“All the long-standing archives at economics journals do not facilitate the reproduction of published results. The data-only archives at the Journal of Business and Economic Statistics and the Economic Journal fail in part because most authors do not contribute data.”</em> In other words, the mere existence of archives was insufficient—author compliance was inconsistent, and critical components such as code and documentation were often missing.</p>
-<p>A more robust solution emerged in the form of computable documents research articles that integrate text, data, and executable code in a single, reproducible format. This approach allows other researchers to fully reproduce the original study, including data preparation, model estimation, and results generation.</p>
+<p>To address this problem, various solutions were proposed. One such initiative was the creation of data archives, such as the American Economic Association (AEA) data repository <span class="citation" data-cites="zotero-321">(<a href="#ref-zotero-321" role="doc-biblioref"><em>American <span>Economic Association</span></em>, n.d.</a>)</span>, aimed at preserving and sharing datasets used in published research. However, these archives often fell short of their goal. As <span class="citation" data-cites="mccullough2008a">McCullough et al. (<a href="#ref-mccullough2008a" role="doc-biblioref">2008</a>)</span> points out:</p>
+<blockquote class="blockquote">
+<p>“All the long-standing archives at economics journals do not facilitate the reproduction of published results. The data-only archives at the Journal of Business and Economic Statistics and the Economic Journal fail in part because most authors do not contribute data.”</p>
+</blockquote>
+<p>In other words, the mere existence of archives was insufficient—author compliance was inconsistent, and critical components such as code and documentation were often missing.</p>
+<p>A more robust solution emerged in the form of <em>computable documents</em>, i.e.&nbsp;research articles that integrate text, data, and executable code in a single reproducible format. This approach allows other researchers to fully reproduce the original study, including data preparation, model estimation, and results generation.</p>
 <p>One example of this is WaveLab, a software package designed to reproduce figures from published wavelet research. Developed with reproducibility in mind, WaveLab includes all the source code required to replicate results [<span class="citation" data-cites="WaveLabReproducibleResearch"><em>WaveLab and Reproducible Research | SpringerLink</em> (<a href="#ref-WaveLabReproducibleResearch" role="doc-biblioref">n.d.</a>)</span>; ]. The authors encouraged readers to inspect and use the code, promoting what they called “really reproducible” research.</p>
-<p>Gentleman (2007) reinforces this idea by emphasizing the role of software in enabling reproducibility: <em>“The step from disseminating analyses via a compendium to reproducible research is a small one. By reproducible research, we mean research papers with accompanying software tools that allow the reader to directly reproduce the results and employ the methods that are presented in the research paper”</em> <span class="citation" data-cites="gentleman2007b">(<a href="#ref-gentleman2007b" role="doc-biblioref">Gentleman &amp; Temple Lang, 2007</a>)</span>.</p>
+<p><span class="citation" data-cites="gentleman2007b">Gentleman &amp; Temple Lang (<a href="#ref-gentleman2007b" role="doc-biblioref">2007</a>)</span> reinforces this idea by emphasizing the role of software in enabling reproducibility:</p>
+<blockquote class="blockquote">
+<p>“The step from disseminating analyses via a compendium to reproducible research is a small one. By reproducible research, we mean research papers with accompanying software tools that allow the reader to directly reproduce the results and employ the methods that are presented in the research paper.”</p>
+</blockquote>
 <p>In this model, the article itself includes:</p>
 <ul>
-<li><p>The research text</p></li>
-<li><p>Code to import and clean the data,</p></li>
-<li><p>Code for model estimation and testing,</p></li>
-<li><p>And code to generate the final results.</p></li>
+<li>The research text</li>
+<li>Code to import and clean the data,</li>
+<li>Code for model estimation and testing,</li>
+<li>And code to generate the final results.</li>
 </ul>
 <p>By submitting such materials alongside the manuscript, the research becomes fully transparent and reproducible. This not only strengthens the credibility of the work but also enables future researchers to build on it more effectively.</p>
 <p>To implement effective data archiving and reproducible research, tools such as Sweave were originally developed to integrate code and documentation. Sweave, the predecessor of knitr, allowed users to embed R code within LaTeX documents to dynamically generate reports <span class="citation" data-cites="SweaveDynamicGeneration">(<a href="#ref-SweaveDynamicGeneration" role="doc-biblioref"><em>Sweave</em>, n.d.</a>)</span>.</p>
-<p>Today, knitr is the more widely used and advanced tool, fully supported within RStudio. RStudio itself is an evolution of earlier tools like the R Notebook and offers an integrated development environment (IDE) that allows users to run code in sequentialchunks, while also enabling individual execution for experimentation and debugging <span class="citation" data-cites="landerEveryoneAdvancedAnalytics2017">(<a href="#ref-landerEveryoneAdvancedAnalytics2017" role="doc-biblioref">Lander, 2017</a>)</span>.</p>
+<p>Today, knitr is the more widely used and advanced tool, fully supported within RStudio. RStudio itself is an evolution of earlier tools like the R Notebook and offers an integrated development environment (IDE) that allows users to run code in sequential chunks, while also enabling individual execution for experimentation and debugging <span class="citation" data-cites="landerEveryoneAdvancedAnalytics2017">(<a href="#ref-landerEveryoneAdvancedAnalytics2017" role="doc-biblioref">Lander, 2017</a>)</span>.</p>
 <p>RStudio supports the full data science workflow: it helps structure and clean data, perform transformations, visualize results, and build statistical or machine learning models. One powerful feature is the use of Quarto documents, which allow users to combine narrative text with code in a single file. These documents can be rendered into multiple output formats—including HTML, PDF, Word, and presentation slides—making it easy to share fully reproducible research reports.</p>
-<p>By using these tools, researchers can ensure that their analyses are transparent, replicable, and accessible to others.</p>
+<p>By using these tools, researchers can ensure that their analyses are transparent, reproducible and accessible to others.</p>
 </section>
-<section id="discussion-of-the-research-question" class="level2">
-<h2 class="anchored" data-anchor-id="discussion-of-the-research-question">Discussion of the research question</h2>
+<section id="discussion-of-the-research-question" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="discussion-of-the-research-question"><span class="header-section-number">5</span> Discussion of the research question</h2>
 <p>Replicability <em>should</em> be the norm in scientific research, and while it presents challenges, expecting it is not too much to ask—it is, in fact, essential for credible and trustworthy science.</p>
-<p>Historically, even early journals like <em>Econometrica</em> emphasized the importance of transparency. As <span class="citation" data-cites="frischEditorsNote1933">Frisch (<a href="#ref-frischEditorsNote1933" role="doc-biblioref">1933</a>)</span> noted, raw data should be published alongside statistical work unless prohibitively large <span class="citation" data-cites="frischEditorsNote1933">(<a href="#ref-frischEditorsNote1933" role="doc-biblioref">Frisch, 1933</a>)</span>. This shows that the value of replicability was acknowledged from the beginning. However, as research became more complex and models more data-intensive, researchers increasingly published only results, making it nearly impossible for others to replicate their work.</p>
+<p>Historically, even early journals like <em>Econometrica</em> emphasized the importance of transparency. As <span class="citation" data-cites="frischEditorsNote1933">Frisch (<a href="#ref-frischEditorsNote1933" role="doc-biblioref">1933</a>)</span> noted, raw data should be published alongside statistical work unless prohibitively large. This shows that the value of replicability was acknowledged from the beginning. However, as research became more complex and models more data-intensive, researchers increasingly published only results, making it nearly impossible for others to replicate their work.</p>
 <p>Solutions like the American Economic Association’s data archive were a step forward, but they often failed in practice because many authors did not submit their data <span class="citation" data-cites="mccullough2008a">(<a href="#ref-mccullough2008a" role="doc-biblioref">McCullough et al., 2008</a>)</span>. This highlights that infrastructure alone isn’t enough stronger cultural and institutional expectations are needed.</p>
-<p>More promising are tools that support computable documents, such as knitr and Quarto in RStudio, which allow researchers to embed code, data, and analysis directly within documents. These tools make replicability not only possible but practical. They allow for seamless integration of text, code, and output, which can be rendered into shareable formats like HTML, PDF, or slides. With these modern tools, the barriers to replicable research are significantly lower than they once were.</p>
+<p>More promising are tools that support computable documents, such as knitr and Quarto in RStudio, which allow researchers to embed code, data, and analysis directly within documents. These tools make replicability not only possible but practical. They allow for seamless integration of text, code, and output, which can be rendered into shareable formats like HTML, PDF, or slides. With these modern tools the barriers to reproducible research, and perhaps also replicable research, are significantly lower than they once were.</p>
 <p>In short, while replicability may have seemed burdensome in the past, today’s tools have made it far more achievable. As the cost of irreproducible research grows—damaging trust, wasting resources, and leading to false conclusions—it becomes increasingly clear that replicability is not an unreasonable demand. Instead, it should be a standard practice that protects the integrity and progress of science.</p>
 <p>Yes, Quarto documents can significantly help with reproducibility by allowing researchers to combine code, data, analysis, and narrative in a single, integrated document.</p>
 <p>As discussed, tools like Sweave and later knitr paved the way for embedding code into research documents, enabling dynamic report generation <span class="citation" data-cites="SweaveDynamicGeneration">(<a href="#ref-SweaveDynamicGeneration" role="doc-biblioref"><em>Sweave</em>, n.d.</a>)</span>. Today, RStudio, building on these foundations, supports Quarto, a modern tool designed specifically for reproducible research workflows. Quarto allows researchers to write documents that include both the text of their analysis and the underlying code that generates the results.</p>
@@ -170,8 +193,8 @@ div.csl-indent {
 <p>Another persistent problem is cultural and institutional inertia. Although tools like RStudio and Quarto make reproducibility easier than ever, many researchers still do not adopt these practices. There may be a lack of incentives, a fear of being scooped, or simply insufficient training. As a result, many studies continue to be published without the necessary materials for replication, and efforts like computable documents remain underutilized.</p>
 <p>Additionally, technical barriers still exist for some users. While tools like Quarto are powerful, they require familiarity with R, LaTeX, markdown, and version control systems, all of which can be intimidating to researchers without a computational background.</p>
 </section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<section id="conclusion" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">6</span> Conclusion</h2>
 <p>So how can we look at these problems?</p>
 <ul>
 <li>Enforce data and code availability policies: Journals and funding bodies should require that authors submit both datasets and code used for analysis as a condition for publication. This should be monitored and enforced, not just encouraged.</li>
@@ -182,13 +205,16 @@ div.csl-indent {
 </ul>
 <p>In conclusion, while powerful solutions now exist to make reproducibility achievable, real change requires a cultural shift one that embraces transparency, provides proper incentives, and equips researchers with both the tools and the training to adopt reproducible practices across the board</p>
 </section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
+<section id="software-used" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="software-used"><span class="header-section-number">7</span> Software used</h2>
 <p>R version 4.5.1 (2025-06-13 ucrt) Platform: x86_64-w64-mingw32/x64 Running under: Windows 11 x64 (build 26100) Matrix products: default LAPACK version 3.12.1 locale: [1] C time zone: Europe/Oslo tzcode source: internal attached base packages: [1] stats graphics grDevices utils datasets methods base loaded via a namespace (and not attached): [1] compiler_4.5.1 cli_3.6.5 rsconnect_1.5.1 tools_4.5.1 rstudioapi_0.17.1 lifecycle_1.0.4 [7] rlang_1.1.6</p>
+</section>
+<section id="references" class="level2 unnumbered" data-number="8">
+
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">8 References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-zotero-321" class="csl-entry" role="listitem">
 <em>American <span>Economic Association</span></em>. (n.d.). https://www.aeaweb.org/journals/data.
 </div>
@@ -240,242 +266,236 @@ Young, N. S., Ioannidis, J. P. A., &amp; Al-Ubaydli, O. (2008). Why <span>Curren
 </div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
       }
-      return false;
-    }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
-    }
-    const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
-        }
-        return codeEl.innerText;
-    }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
         }
       }
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
-        },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'quarto',
-        placement: 'bottom-start',
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config); 
     }
-    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-    for (var i=0; i<noterefs.length; i++) {
-      const ref = noterefs[i];
-      tippyHover(ref, function() {
-        // use id or data attribute instead here
-        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-        try { href = new URL(href).hash; } catch {}
-        const id = href.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note) {
-          return note.innerHTML;
-        } else {
-          return "";
-        }
-      });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
     }
-    const xrefs = window.document.querySelectorAll('a.quarto-xref');
-    const processXRef = (id, note) => {
-      // Strip column container classes
-      const stripColumnClz = (el) => {
-        el.classList.remove("page-full", "page-columns");
-        if (el.children) {
-          for (const child of el.children) {
-            stripColumnClz(child);
-          }
-        }
-      }
-      stripColumnClz(note)
-      if (id === null || id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children && note.children.length > 2) {
-          container.appendChild(note.children[0].cloneNode(true));
-          for (let i = 1; i < note.children.length; i++) {
-            const child = note.children[i];
-            if (child.tagName === "P" && child.innerText === "") {
-              continue;
-            } else {
-              container.appendChild(child.cloneNode(true));
-              break;
-            }
-          }
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(container);
-          }
-          return container.innerHTML
-        } else {
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(note);
-          }
-          return note.innerHTML;
-        }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
       } else {
-        // Remove any anchor links if they are present
-        const anchorLink = note.querySelector('a.anchorjs-link');
-        if (anchorLink) {
-          anchorLink.remove();
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
         }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        if (note.classList.contains("callout")) {
-          return note.outerHTML;
-        } else {
-          return note.innerHTML;
-        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
       }
     }
-    for (var i=0; i<xrefs.length; i++) {
-      const xref = xrefs[i];
-      tippyHover(xref, undefined, function(instance) {
-        instance.disable();
-        let url = xref.getAttribute('href');
-        let hash = undefined; 
-        if (url.startsWith('#')) {
-          hash = url;
-        } else {
-          try { hash = new URL(url).hash; } catch {}
-        }
-        if (hash) {
-          const id = hash.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note !== null) {
-            try {
-              const html = processXRef(id, note.cloneNode(true));
-              instance.setContent(html);
-            } finally {
-              instance.enable();
-              instance.show();
-            }
-          } else {
-            // See if we can fetch this
-            fetch(url.split('#')[0])
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(html, "text/html");
-              const note = htmlDoc.getElementById(id);
-              if (note !== null) {
-                const html = processXRef(id, note);
-                instance.setContent(html);
-              } 
-            }).finally(() => {
-              instance.enable();
-              instance.show();
-            });
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
           }
         } else {
-          // See if we can fetch a full url (with no hash to target)
-          // This is a special case and we should probably do some content thinning / targeting
-          fetch(url)
+          // See if we can fetch this
+          fetch(url.split('#')[0])
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.querySelector('main.content');
+            const note = htmlDoc.getElementById(id);
             if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
-              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-                note.children[0].remove();
-              }
-              const html = processXRef(null, note);
+              const html = processXRef(id, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -483,161 +503,185 @@ Young, N. S., Ioannidis, J. P. A., &amp; Al-Ubaydli, O. (2008). Why <span>Curren
             instance.show();
           });
         }
-      }, function(instance) {
-      });
-    }
-        let selectedAnnoteEl;
-        const selectorForAnnotation = ( cell, annotation) => {
-          let cellAttr = 'data-code-cell="' + cell + '"';
-          let lineAttr = 'data-code-annotation="' +  annotation + '"';
-          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-          return selector;
-        }
-        const selectCodeLines = (annoteEl) => {
-          const doc = window.document;
-          const targetCell = annoteEl.getAttribute("data-target-cell");
-          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-          const lineIds = lines.map((line) => {
-            return targetCell + "-" + line;
-          })
-          let top = null;
-          let height = null;
-          let parent = null;
-          if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
-            }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
-            }
-            selectedAnnoteEl = annoteEl;
-          }
-        };
-        const unselectCodeLines = () => {
-          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-          elementsIds.forEach((elId) => {
-            const div = window.document.getElementById(elId);
-            if (div) {
-              div.remove();
-            }
-          });
-          selectedAnnoteEl = undefined;
-        };
-          // Handle positioning of the toggle
-      window.addEventListener(
-        "resize",
-        throttle(() => {
-          elRect = undefined;
-          if (selectedAnnoteEl) {
-            selectCodeLines(selectedAnnoteEl);
-          }
-        }, 10)
-      );
-      function throttle(fn, ms) {
-      let throttle = false;
-      let timer;
-        return (...args) => {
-          if(!throttle) { // first call gets through
-              fn.apply(this, args);
-              throttle = true;
-          } else { // all the others get throttled
-              if(timer) clearTimeout(timer); // cancel #2
-              timer = setTimeout(() => {
-                fn.apply(this, args);
-                timer = throttle = false;
-              }, ms);
-          }
-        };
-      }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
-            }
-          });
-        }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
       } else {
-        return undefined;
-      }
-    };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
             }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
         });
       }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
     }
-  });
-  </script>
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
 </div> <!-- /content -->
 
 

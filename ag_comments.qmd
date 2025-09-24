@@ -1,0 +1,24 @@
+---
+title: "ag Comments"
+format: html
+---
+
+## General comments
+
+- Nice paper.
+- “Next, we will discuss whether reproducibility is essential or if replication alone can be considered adequate.” Changed this to: “Next, we will discuss whether replicability is essential or if reproducibility alone can be considered adequate.” 
+- *Replicability* is a far stronger condition than *reproducibility*
+- I have changed the list just before section Publication bias to a definition list. Seems to be what you want.
+- I have changed the quote of young (2008) to a block quote
+- The same for Frisch (1933). Nice historic reference.
+  - Let the software take care of the formatting. You indicate the structure.
+- I have fixed some typos and also suggested some minor changes to the text
+- Nice commit history
+
+
+## Tips and Fixes
+
+- See changes to YAML header to support different output formats
+- `citeproc: true` forces typs to use bibtex instead of it's own citation-system.
+- Added `output-file: "msb105_ass_1_25_tex.pdf"` to pdf format. Else typs and pdf will overwrite each others pdf file.
+
