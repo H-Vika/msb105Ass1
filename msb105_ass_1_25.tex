@@ -223,7 +223,7 @@ new data. Reproducibility plays a key role in building this trust, as it
 allows scientist to verify and gain confidence in the conclusions drawn
 form research. However, in recent times, the scientific community has
 raised concerns about the growing number of peer-reviewed preclinical
-studies that cannot be reproduced(McNutt, 2014).
+studies that cannot be reproduced (McNutt, 2014).
 
 In this paper, we will explore the concept of reproducibility in
 scientific research, why it is important for building trust and whether
@@ -231,19 +231,18 @@ current practices are sufficient to ensure its reliability for future
 scientists. We begin by reviewing the literature to clarify the
 definitions and distinctions between ``reproducibility'' and ''
 replicability'' and their roles in the scientific process. Next, we will
-discuss whether reproduccibility is essential or if replication alone
-can be considered adequate. We will also examine hoew tools such as R
-and Quarto documents can enhance research reproducibility, identify
-common challenges in this process, and consider possible solutions.
-Finally, we will conclude by reflection on these issues and sharing our
-perspective on the state and future of reproducibility in scientific
-data.
+discuss whether replicability is essential or if reproducibility alone
+can be considered adequate. We will also examine how tools such as R and
+Quarto documents can enhance research reproducibility, identify common
+challenges in this process, and consider possible solutions. Finally, we
+will conclude by reflection on these issues and sharing our perspective
+on the state and future of reproducibility in scientific data.
 
 \section{Literature review}\label{literature-review}
 
 \section{Theory on reproducibility}\label{theory-on-reproducibility}
 
-THe cover story of The Economist, titled ``How Science Goes Wrong'',
+The cover story of The Economist, titled ``How Science Goes Wrong'',
 adopts the terminology for reproducibility from (Barba, n.d.), defining
 it as the ability to regenerate results using the original researcher's
 data and code. In contrast, the same source describes replicability as
@@ -258,8 +257,8 @@ Another important concept is generalizability, which refers to the
 extent to which the results of a study can be applied to different
 contexts or populations beyond the original study setting. Together,
 reproducibility, replicability and generalizability contribute to what
-is often described as robust and reliable science, a foundation
-essential for scientific progress and the ability to build confidently
+is often described as robust and reliable science. This is an essential
+foundation for scientific progress and the ability to build confidently
 on prior research.
 
 In this paper, we will focus primarily on the role of reproducibility in
@@ -269,34 +268,31 @@ trustworthiness of research.
 Reproducibility is a necessary, but not sufficient, condition for
 replicability. As noted by Peng (2011), reproducibility should be
 considered a minimum requirement for scientific publications. As
-previously discussed, reproducibility helps scientists build confidence
+previously discussed, reproducibility help scientists build confidence
 and trust in their findings---but what exactly does ``research
 reproducibility'' mean?
 
 Goodman et al. (2016) outlines three distinct dimensions of research
 reproducibility:
 
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Methods reproducibility} -- This refers to providing
-  sufficient detail about the study's procedures and data so that the
-  same research can be repeated, both theoretically and in practice.
-\item
-  \textbf{Results reproducibility} (also referred to as
-  \emph{replicability}) -- This involves obtaining the same results as a
-  previous study when conducting an independent study using the same
-  methodology.
-\item
-  \textbf{Robustness and generalizability} -- While sometimes used
-  interchangeably with reproducibility, these terms highlight additional
-  aspects of scientific reliability. \emph{Robustness} refers to the
-  stability of experimental conclusions under variations in baseline
-  assumptions or procedures. \emph{Generalizability}, on the other hand,
-  refers to the extent to which a study's findings remain valid in
-  different settings or populations outside the original experimental
-  framework.
-\end{itemize}
+\begin{description}
+\item[Methods reproducibility]
+This refers to providing sufficient detail about the study's procedures
+and data so that the same research can be repeated, both theoretically
+and in practice.
+\item[Results reproducibility]
+(also referred to as \emph{replicability}) -- This involves obtaining
+the same results as a previous study when conducting an independent
+study using the same methodology.
+\item[Robustness and generalizability]
+While sometimes used interchangeably with reproducibility, these terms
+highlight additional aspects of scientific reliability.
+\emph{Robustness} refers to the stability of experimental conclusions
+under variations in baseline assumptions or procedures.
+\emph{Generalizability}, on the other hand, refers to the extent to
+which a study's findings remain valid in different settings or
+populations outside the original experimental framework.
+\end{description}
 
 Together, these concepts form a broader understanding of what it means
 for scientific research to be reliable and trustworthy.
@@ -322,8 +318,8 @@ If scientific journals systematically favor studies that reject the null
 hypothesis, the literature may become saturated with false positives.
 This situation undermines the foundation of future research, especially
 when later studies attempt (and fail) to replicate the original
-findings. One well-known example of this issue is the \emph{``File
-Drawer Problem''} described by Rosenthal (1979), where studies that fail
+findings. One well-known example of this issue is the ``\emph{File
+Drawer Problem}'' described by Rosenthal (1979), where studies that fail
 to reject the null hypothesis are effectively ``filed away'' and never
 published, while only statistically significant results make it to
 print. This selective publication practice skews the overall body of
@@ -337,11 +333,17 @@ costly and may lead to ineffective or even harmful policy decisions.
 
 Fields that regularly publish false positives risk losing credibility
 and the trust of the scientific community (Simmons et al., 2011). As
-Young et al. (2008) notes, \emph{``More alarming is the general paucity
-in the literature of negative data. In some fields, almost all published
-studies show formally significant results, so that statistical
-significance no longer appears discriminating.''} This lack of negative
-results contributes further to the distortion of the scientific record.
+Young et al. (2008) notes:
+
+\begin{quote}
+``More alarming is the general paucity in the literature of negative
+data. In some fields, almost all published studies show formally
+significant results, so that statistical significance no longer appears
+discriminating.''
+\end{quote}
+
+This lack of negative results contributes further to the distortion of
+the scientific record.
 
 Publication bias also compromises meta-analyses, which aggregate data
 from multiple studies to draw broader conclusions (Russo, 2007). If the
@@ -355,11 +357,16 @@ reliability, replicability, and credibility of scientific research.
 When it comes to economics and the issue of research reproducibility,
 historical efforts can be traced back to journals like
 \emph{Econometrica}. In an editorial note, Frisch (1933) emphasized the
-importance of transparency, stating: \emph{``Statistical and other
-numerical work presented in Econometrica, the original raw data will, as
-a rule, be published, unless their volume is excessive''}. This reflects
-an early recognition that making data publicly available is essential
-for reproducibility.
+importance of transparency, stating:
+
+\begin{quote}
+``Statistical and other numerical work presented in Econometrica, the
+original raw data will, as a rule, be published, unless their volume is
+excessive''.
+\end{quote}
+
+This reflects an early recognition that making data publicly available
+is essential for reproducibility.
 
 However, over time, as economic research grew in complexity and scale,
 models became larger and more computationally intensive. As a result,
@@ -373,20 +380,24 @@ initiative was the creation of data archives, such as the American
 Economic Association (AEA) data repository (\emph{American {Economic
 Association}}, n.d.), aimed at preserving and sharing datasets used in
 published research. However, these archives often fell short of their
-goal. As McCullough et al. (2008) points out: \emph{``All the
-long-standing archives at economics journals do not facilitate the
-reproduction of published results. The data-only archives at the Journal
-of Business and Economic Statistics and the Economic Journal fail in
-part because most authors do not contribute data.''} In other words, the
-mere existence of archives was insufficient---author compliance was
-inconsistent, and critical components such as code and documentation
-were often missing.
+goal. As McCullough et al. (2008) points out:
 
-A more robust solution emerged in the form of computable documents
-research articles that integrate text, data, and executable code in a
-single, reproducible format. This approach allows other researchers to
-fully reproduce the original study, including data preparation, model
-estimation, and results generation.
+\begin{quote}
+``All the long-standing archives at economics journals do not facilitate
+the reproduction of published results. The data-only archives at the
+Journal of Business and Economic Statistics and the Economic Journal
+fail in part because most authors do not contribute data.''
+\end{quote}
+
+In other words, the mere existence of archives was insufficient---author
+compliance was inconsistent, and critical components such as code and
+documentation were often missing.
+
+A more robust solution emerged in the form of \emph{computable
+documents}, i.e.~research articles that integrate text, data, and
+executable code in a single reproducible format. This approach allows
+other researchers to fully reproduce the original study, including data
+preparation, model estimation, and results generation.
 
 One example of this is WaveLab, a software package designed to reproduce
 figures from published wavelet research. Developed with reproducibility
@@ -396,17 +407,21 @@ SpringerLink} (n.d.); {]}. The authors encouraged readers to inspect and
 use the code, promoting what they called ``really reproducible''
 research.
 
-Gentleman (2007) reinforces this idea by emphasizing the role of
-software in enabling reproducibility: \emph{``The step from
-disseminating analyses via a compendium to reproducible research is a
-small one. By reproducible research, we mean research papers with
-accompanying software tools that allow the reader to directly reproduce
-the results and employ the methods that are presented in the research
-paper''} (Gentleman \& Temple Lang, 2007).
+Gentleman \& Temple Lang (2007) reinforces this idea by emphasizing the
+role of software in enabling reproducibility:
+
+\begin{quote}
+``The step from disseminating analyses via a compendium to reproducible
+research is a small one. By reproducible research, we mean research
+papers with accompanying software tools that allow the reader to
+directly reproduce the results and employ the methods that are presented
+in the research paper.''
+\end{quote}
 
 In this model, the article itself includes:
 
 \begin{itemize}
+\tightlist
 \item
   The research text
 \item
@@ -431,7 +446,7 @@ R code within LaTeX documents to dynamically generate reports
 Today, knitr is the more widely used and advanced tool, fully supported
 within RStudio. RStudio itself is an evolution of earlier tools like the
 R Notebook and offers an integrated development environment (IDE) that
-allows users to run code in sequentialchunks, while also enabling
+allows users to run code in sequential chunks, while also enabling
 individual execution for experimentation and debugging (Lander, 2017).
 
 RStudio supports the full data science workflow: it helps structure and
@@ -443,7 +458,7 @@ output formats---including HTML, PDF, Word, and presentation
 slides---making it easy to share fully reproducible research reports.
 
 By using these tools, researchers can ensure that their analyses are
-transparent, replicable, and accessible to others.
+transparent, reproducible and accessible to others.
 
 \section{Discussion of the research
 question}\label{discussion-of-the-research-question}
@@ -454,12 +469,11 @@ is, in fact, essential for credible and trustworthy science.
 
 Historically, even early journals like \emph{Econometrica} emphasized
 the importance of transparency. As Frisch (1933) noted, raw data should
-be published alongside statistical work unless prohibitively large
-(Frisch, 1933). This shows that the value of replicability was
-acknowledged from the beginning. However, as research became more
-complex and models more data-intensive, researchers increasingly
-published only results, making it nearly impossible for others to
-replicate their work.
+be published alongside statistical work unless prohibitively large. This
+shows that the value of replicability was acknowledged from the
+beginning. However, as research became more complex and models more
+data-intensive, researchers increasingly published only results, making
+it nearly impossible for others to replicate their work.
 
 Solutions like the American Economic Association's data archive were a
 step forward, but they often failed in practice because many authors did
@@ -472,9 +486,9 @@ knitr and Quarto in RStudio, which allow researchers to embed code,
 data, and analysis directly within documents. These tools make
 replicability not only possible but practical. They allow for seamless
 integration of text, code, and output, which can be rendered into
-shareable formats like HTML, PDF, or slides. With these modern tools,
-the barriers to replicable research are significantly lower than they
-once were.
+shareable formats like HTML, PDF, or slides. With these modern tools the
+barriers to reproducible research, and perhaps also replicable research,
+are significantly lower than they once were.
 
 In short, while replicability may have seemed burdensome in the past,
 today's tools have made it far more achievable. As the cost of
@@ -580,7 +594,7 @@ that embraces transparency, provides proper incentives, and equips
 researchers with both the tools and the training to adopt reproducible
 practices across the board
 
-\section{References}\label{references}
+\section{Software used}\label{software-used}
 
 R version 4.5.1 (2025-06-13 ucrt) Platform: x86\_64-w64-mingw32/x64
 Running under: Windows 11 x64 (build 26100) Matrix products: default
@@ -589,6 +603,9 @@ source: internal attached base packages: {[}1{]} stats graphics
 grDevices utils datasets methods base loaded via a namespace (and not
 attached): {[}1{]} compiler\_4.5.1 cli\_3.6.5 rsconnect\_1.5.1
 tools\_4.5.1 rstudioapi\_0.17.1 lifecycle\_1.0.4 {[}7{]} rlang\_1.1.6
+
+\section*{References}\label{references}
+\addcontentsline{toc}{section}{References}
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
